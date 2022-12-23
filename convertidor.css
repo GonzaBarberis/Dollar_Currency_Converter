@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #4c956c; */
+    background-image: url(./depositphotos_70775675-stock-photo-paper-money-dolar-background-of.jpg);
+}
+
+.todo{
+    height: 510px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+label{
+    font-size: 25px;
+}
+input{
+    font-size: 20px;
+    padding: 5px;
+    width: 80px;
+
+}
+.actual{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 140px;
+}
+
+.aa{
+    padding: 10px;
+}
+
+.calculo{
+    padding: 10px;
+}
+
+.precioEnDolares{
+    /* background-color: #709775; */
+    height: 200px;
+    width: 500px;
+    padding: 10px;
+    margin-top: 30px;
+    border: 5px dotted #386641;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.botn{
+    cursor: pointer;
+    width: 210px;
+    margin-top: 15px;
+}
+
+.valorProd{
+    width: 180px;
+}
+
+.amigo{
+    text-align: center;
+    font-size: 60px;
+}
+
+p{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.tex{
+    color: white;
+    background-color: #386641;
+    padding: 5px 25px;
+    border-radius: 7px;
+    margin-bottom: 3px;
+}
+
+a{
+    /* position: absolute;
+    right: 43%;
+    bottom: 100px; */
+    color: blue;
+    font-size: 20px;
+    margin-top: 12px;
+}
