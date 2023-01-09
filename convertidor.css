@@ -26,6 +26,7 @@ body{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     background-color: white;
     border-radius: 10px;
+    margin: 40px 0;
 }
 
 label{
@@ -110,7 +111,18 @@ a{
 
 .copy{
     font-size: 20px;
-    position: absolute;
+    /* position: absolute; */
+    color: white;
+    /* bottom: 70px; */
+    background-color: #588157;
+    padding: 7px 10px;
+    border-radius: 4px;
+
+}
+
+.copyRes{
+    display: none;
+    font-size: 20px;
     color: white;
     bottom: 70px;
     background-color: #588157;
@@ -124,7 +136,7 @@ a{
 @media only screen and (max-width: 650px){
 
     .todo{
-        height: 590px;
+        height: 605px;
         width: 93%;
     }
 
@@ -167,6 +179,14 @@ a{
         bottom: 10px;
     }
 
+    .copy{
+        display: none;
+    }
+
+    .copyRes{
+        display: block;
+        text-align: center;
+    }
 
 
 }
