@@ -1,4 +1,4 @@
-const actualizar = document.querySelector(".botn")
+const actualizar = document.querySelector(".botn1")
 //const UprecioUSDUSD = 0;
 const precioProducto = document.querySelector(".valorProd")
 var hayPrecio = false
@@ -18,38 +18,45 @@ actualizar.addEventListener("click", ()=>{
     
 })
 
+const convertir = document.querySelector(".botn2")
+convertir.addEventListener("click", ()=>{
+    conversion()
+})
+
 
 precioProducto.addEventListener("keyup",(e)=>{
     let tecla = e.key;
     if (tecla == 'Enter'){
         console.log(hayPrecio)
-        if (hayPrecio = true){
-            if (precioProducto.value > 50){
-                
-                excedente = parseInt(precioProducto.value) - 50
-                mitadExcedente = excedente / 2
-                impuestos = parseInt(precioProducto.value) + mitadExcedente
-                total = impuestos * precioUSD
-                
-                
-                texto = `<h1 class="amigo">AR$<b style=color:red>${total.toFixed(2)}</b></h1>`
-            }
-            else{
-                total = precioProducto.value * precioUSD
-                texto = `<h1 class="amigo">AR$<b style=color:#386641>${total.toFixed(2)}</b></h1>`
-            }
-            let div = document.querySelector(".precioEnDolares")
-            div.innerHTML = texto
-        }
-        else{
-            alert('Flaqui ingresa un precio')
-        }
-        
+        conversion()
         
     }
     
-
 })
+
+const conversion = () =>{
+    if (hayPrecio = true){
+        if (precioProducto.value > 50){
+            
+            excedente = parseInt(precioProducto.value) - 50
+            mitadExcedente = excedente / 2
+            impuestos = parseInt(precioProducto.value) + mitadExcedente
+            total = impuestos * precioUSD
+            
+            
+            texto = `<h1 class="amigo">AR$<b style=color:red>${total.toFixed(2)}</b></h1>`
+        }
+        else{
+            total = precioProducto.value * precioUSD
+            texto = `<h1 class="amigo">AR$<b style=color:#386641>${total.toFixed(2)}</b></h1>`
+        }
+        let div = document.querySelector(".precioEnDolares")
+        div.innerHTML = texto
+    }
+    else{
+        alert('Flaqui ingresa un precio')
+    }
+}
 
 
 

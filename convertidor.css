@@ -9,6 +9,7 @@ body{
     height: 100vh;
     width: 100vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     /* background-color: #4c956c; */
@@ -16,7 +17,7 @@ body{
 }
 
 .todo{
-    height: 510px;
+    height: 570px;
     width: 700px;
     display: flex;
     justify-content: center;
@@ -51,6 +52,10 @@ input{
 
 .calculo{
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .precioEnDolares{
@@ -70,6 +75,7 @@ input{
     cursor: pointer;
     width: 210px;
     margin-top: 15px;
+    border:2px solid #45704e;
 }
 
 .valorProd{
@@ -100,4 +106,65 @@ a{
     color: blue;
     font-size: 20px;
     margin-top: 12px;
+}
+
+.copy{
+    font-size: 20px;
+    position: absolute;
+    color: white;
+    bottom: 70px;
+    background-color: #588157;
+    padding: 7px 10px;
+    border-radius: 4px;
+
+}
+
+
+
+@media only screen and (max-width: 650px){
+
+    .todo{
+        height: 600px;
+        width: 90%;
+    }
+
+    label{
+        font-size: 20px;
+    }
+
+    .tex{
+        font-size: 18px;
+        padding: 5px 20px;
+    }
+
+    input{
+        font-size: 17px;
+        padding: 5px;
+        width: 60px;
+        height: 30px;
+    }
+
+    .valorProd{
+        width: 70px;
+    }
+
+    .precioEnDolares{
+        width: 100%;
+    }
+
+    .amigo{
+        font-size: 50px;
+    }
+
+    .botn{
+        height: 40px;
+    }
+
+    .copy{
+        font-size: 14px;
+        bottom: 50px;
+    }
+
+
+
 }
