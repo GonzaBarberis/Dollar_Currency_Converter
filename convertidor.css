@@ -124,8 +124,8 @@ a{
 @media only screen and (max-width: 650px){
 
     .todo{
-        height: 600px;
-        width: 90%;
+        height: 590px;
+        width: 93%;
     }
 
     label{
@@ -133,8 +133,9 @@ a{
     }
 
     .tex{
-        font-size: 18px;
+        font-size: 17px;
         padding: 5px 20px;
+
     }
 
     input{
@@ -149,7 +150,7 @@ a{
     }
 
     .precioEnDolares{
-        width: 100%;
+        width: 92%;
     }
 
     .amigo{
@@ -158,11 +159,12 @@ a{
 
     .botn{
         height: 40px;
+        border: none;
     }
 
     .copy{
         font-size: 14px;
-        bottom: 50px;
+        bottom: 10px;
     }
 
 
