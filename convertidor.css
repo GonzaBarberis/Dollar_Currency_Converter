@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Poppins', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body{
@@ -17,7 +17,7 @@ body{
 }
 
 .todo{
-    height: 570px;
+    height: 700px;
     width: 700px;
     display: flex;
     justify-content: center;
@@ -35,7 +35,7 @@ label{
 input{
     font-size: 20px;
     padding: 5px;
-    width: 80px;
+    width: 100px;
 
 }
 .actual{
@@ -51,6 +51,12 @@ input{
     padding: 10px;
 }
 
+
+.check{
+    height: 20px;
+}
+
+
 .calculo{
     padding: 10px;
     display: flex;
@@ -64,13 +70,34 @@ input{
     height: 200px;
     width: 500px;
     padding: 10px;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 0px;
     border: 5px dotted #386641;
     display: flex;
     justify-content: center;
     align-items: center;
+    letter-spacing: 4px;
     
 }
+
+.tazaTexto{
+    font-size: 22px;
+    font-family: 'Gilroy-Bold', sans-serif;
+}
+
+.taza{
+    padding: 7px;
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 3px;
+    background-color: #FFCE00;
+    color: #152663;
+}
+
 
 .botn{
     cursor: pointer;
@@ -97,7 +124,7 @@ p{
     background-color: #386641;
     padding: 5px 25px;
     border-radius: 7px;
-    margin-bottom: 3px;
+    margin-bottom: 25px;
 }
 
 a{
@@ -106,7 +133,7 @@ a{
     bottom: 100px; */
     color: blue;
     font-size: 20px;
-    margin-top: 12px;
+    padding-top: 14px;
 }
 
 .copy{
@@ -135,8 +162,17 @@ a{
 
 @media only screen and (max-width: 650px){
 
+    body{
+        height: 100vh;
+    }
+
+    .a{
+        text-align: center;
+    }
+
+
     .todo{
-        height: 605px;
+        height: 630px;
         width: 93%;
     }
 
@@ -147,7 +183,10 @@ a{
     .tex{
         font-size: 17px;
         padding: 5px 20px;
+    }
 
+    .precioIng{
+        height: 50px;
     }
 
     input{
@@ -161,12 +200,24 @@ a{
         width: 70px;
     }
 
+    .taza{
+        width: 295px;
+        margin-top: 15px;
+    }
+    .tazaTexto{
+        font-size: 20px;
+        text-align: center;
+        width: 550px;
+    }
+
     .precioEnDolares{
         width: 295px;
+        height: 90px;
+        letter-spacing: 0;
     }
 
     .amigo{
-        font-size: 50px;
+        font-size: 37px;
     }
 
     .botn{
@@ -186,6 +237,7 @@ a{
     .copyRes{
         display: block;
         text-align: center;
+        font-size: 15px;
     }
 
 

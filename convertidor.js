@@ -3,8 +3,14 @@ const actualizar = document.querySelector(".botn1")
 const precioProducto = document.querySelector(".valorProd")
 var hayPrecio = false
 let precio
+
+
+let taza = document.querySelector('.check')
+
+
+
 actualizar.addEventListener("click", ()=>{
-    precioUSD = parseInt(document.querySelector(".valorDolar").value);
+    precioUSD = parseFloat(document.querySelector(".valorDolar").value);
     if (isNaN(precioUSD)){
         alert('Ingrese el valor del dolar tarjeta actual')
     }
@@ -34,20 +40,37 @@ precioProducto.addEventListener("keyup",(e)=>{
     
 })
 
+
+taza.addEventListener("click",()=>{
+    conversion()
+})
+
+
+
+
 const conversion = () =>{
+    if (taza.checked == true){
+        total = 800
+    }
+    else{
+        total = 0
+    }
+
+
     if (hayPrecio = true){
+
         if (precioProducto.value > 50){
             
-            excedente = parseInt(precioProducto.value) - 50
+            excedente = parseFloat(precioProducto.value) - 50
             mitadExcedente = excedente / 2
-            impuestos = parseInt(precioProducto.value) + mitadExcedente
-            total = impuestos * precioUSD
+            impuestos = parseFloat(precioProducto.value) + mitadExcedente
+            total = total + impuestos * precioUSD
             
             
             texto = `<h1 class="amigo">AR$<b style=color:red>${total.toFixed(2)}</b></h1>`
         }
         else{
-            total = precioProducto.value * precioUSD
+            total = total + precioProducto.value * precioUSD
             texto = `<h1 class="amigo">AR$<b style=color:#386641>${total.toFixed(2)}</b></h1>`
         }
         let div = document.querySelector(".precioEnDolares")
@@ -57,7 +80,6 @@ const conversion = () =>{
         alert('Flaqui ingresa un precio')
     }
 }
-
 
 
 
