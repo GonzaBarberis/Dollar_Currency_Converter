@@ -4,25 +4,67 @@ const precioProducto = document.querySelector(".valorProd")
 var hayPrecio = false
 let precio
 
-
 let taza = document.querySelector('.check')
 
+let price
 
 
-actualizar.addEventListener("click", ()=>{
-    precioUSD = parseFloat(document.querySelector(".valorDolar").value);
-    if (isNaN(precioUSD)){
-        alert('Ingrese el valor del dolar tarjeta actual')
-    }
-    else{
-        texto = `<p class="tex">Precio dólar ingresado: $${precioUSD}</p>`
+
+const apiDolar = () =>{
+    let url = 'https://www.dolarsi.com/api/api.php?type=valoresprincipales'
+
+    let respuesta = fetch(url, {
+      "method":"GET",
+      "headers":{
+        "Accept": "application/json",
+        "Content-Type":"application/json"
+      }
+    }).then(response => response.json())
+      .then(data => formatear(data))
+    
+    
+}
+
+
+const formatear = (data)=>{
+    let dato = data[0]['casa']['venta']
+    let totalAPI = parseFloat(dato) * 1.75
+    price = totalAPI
+    
+}
+
+
+apiDolar()
+
+
+const datos1 = ()=>{
+    setTimeout(function(){
+        precioUSD = price
+        texto = `<p class="tex"><i>Precio dólar tarjeta HOY: $${precioUSD}</i></p>`
         let div = document.querySelector(".precioIng")
         div.innerHTML = texto
         hayPrecio = true
         precioProducto.disabled = false
-    }
+    }, 1700);
     
-})
+}
+
+// actualizar.addEventListener("click", ()=>{
+//     //precioUSD = parseFloat(document.querySelector(".valorDolar").
+//     //value);
+//     precioUSD = price
+//     if (isNaN(precioUSD)){
+//         alert('Ingrese el valor del dolar tarjeta actual')
+//     }
+//     else{
+//         texto = `<p class="tex">Precio dólar ingresado: $${precioUSD}</p>`
+//         let div = document.querySelector(".precioIng")
+//         div.innerHTML = texto
+//         hayPrecio = true
+//         precioProducto.disabled = false
+//     }
+    
+// })
 
 const convertir = document.querySelector(".botn2")
 convertir.addEventListener("click", ()=>{
@@ -50,7 +92,7 @@ taza.addEventListener("click",()=>{
 
 const conversion = () =>{
     if (taza.checked == true){
-        total = 800
+        total = 1150
     }
     else{
         total = 0
@@ -80,6 +122,12 @@ const conversion = () =>{
         alert('Flaqui ingresa un precio')
     }
 }
+
+
+
+
+
+
 
 
 

@@ -17,7 +17,7 @@ body{
 }
 
 .todo{
-    height: 700px;
+    height: 650px;
     width: 700px;
     display: flex;
     justify-content: center;
@@ -44,7 +44,7 @@ input{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 140px;
+    height: 120px;
 }
 
 .aa{
@@ -121,10 +121,13 @@ p{
 }
 .tex{
     color: white;
-    background-color: #386641;
-    padding: 5px 25px;
+    background-color: #588157;
+    padding: 5px 40px;
     border-radius: 7px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+    font-size: 36px;
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 a{
@@ -172,7 +175,7 @@ a{
 
 
     .todo{
-        height: 630px;
+        height: 570px;
         width: 93%;
     }
 
@@ -183,6 +186,7 @@ a{
     .tex{
         font-size: 17px;
         padding: 5px 20px;
+        margin: 0;
     }
 
     .precioIng{
@@ -238,6 +242,12 @@ a{
         display: block;
         text-align: center;
         font-size: 15px;
+    }
+
+    .actual{
+        height: 50px;
+        display: inline;
+        padding: 0;
     }
 
 
